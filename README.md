@@ -1,14 +1,36 @@
-# Games Package
-r-package-games created by GitHub Classroom
+This package will run simulations of several popular games and give information about what happens when a user plays the game. These are the games available in this package:
 
-We will create a Games package.
+1. Black Jack: In this game, two players are initially given two cards, and they do not know the other person’s cards. The goal of the game is to either have the sum of the cards equal 21 or, if the game ends, get a higher sum than the other player. However, if the sum of the cards is higher than 21, then the player loses. Cards are worth their numeric value (and Jack is worth 11, Queen 12, King 13, and Ace can be 1 or 11 depending on what the player decides). The player can either draw more cards or stop drawing cards, but they will not know what card they draw before they actually draw the card. The game ends when both players decide to stop drawing. The game ties if both players end up with a sum of at least 21 or if both players end up with the same sum.   
 
-## Brian - Boggle
+2. Boggle  
 
-## Olivia - Tic-Tac-Toe
+3. Chinese Poker  
 
-## Anna - Uno
+4. Tic Tac Toe  
 
-## Linde - Solitaire
-For my part of the package, I will simulate the classic Solitaire card game, played with 52 cards. I will simulate the results from both a 1-deal (unveil 1 card from deck each time) and 3-deal (unveil 3 cards from deck each time) versions. I will then run simulations of this game a large number of times and examine the distribution of the results. My Solitaire function in the Games package will generate a random number from my Solitaire distribution of either 1-deal or 3-deal. 
 
+There are four things this package gives.  
+
+1. The user can play any of the games available.  
++ Black Jack: The user plays against a computer. They are given two card values initially and then are asked if they would like to keep on drawing.    
++ Boggle   
++	Chinese Poker  
++	Tic Tac Toe  
+
+2. The user can get a suggestion of a good move for their current place in the game.
++ Black Jack: The user is told whether they should draw or not. This will be based on previous heuristics of what is the most optimal move or something different (like the probability of winning if they do decide to draw compared to the probability of staying). If the user initially has an Ace, they are told also if it is better to treat the Ace as a 1 or an 11. 
++ Boggle   
++	Chinese Poker  
++	Tic Tac Toe  
+
+3. The user can see what happens in the game over time on average with their initial placement.
++ Black Jack: The user gets to see a graph of the probability of winning by the number of draws, given their initial placement. 
++ Boggle   
++	Chinese Poker  
++	Tic Tac Toe  
+
+4. The user can see how they are doing compared to the average. 
++ Black Jack (where ace is 1 or 11): The user can see how well they played based on the probability of them winning the number of games they won with the initial cards they had. 
++ Boggle   
++	Chinese Poker  
++	Tic Tac Toe  
