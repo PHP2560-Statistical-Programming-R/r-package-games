@@ -11,7 +11,7 @@ This game can be played with 3-5 people. The goal of the game is to be the first
 **4. Tic Tac Toe (Olivia)**  
 
 
-###There are four things this package gives.  
+There are four things this package gives.  
 
 **1. The user can play any of the games available.**  
 + Black Jack: The user plays against a computer. They are given two card values initially and then are asked if they would like to keep on drawing.    
