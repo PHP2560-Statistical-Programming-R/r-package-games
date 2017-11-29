@@ -12,9 +12,6 @@ This game will be played with 3 people (54/3 = 18 cards per player). The goal of
 **4. Tic Tac Toe (Olivia)**  
 The object of Tic Tac Toe is to get three X's or O's in a row. You play on a three by three game board. Players alternate placing Xs and Os on the game board until either opponent has three in a row (a win for that opponent) or all nine squares are filled (a tie).
 
-
-There are four things this package gives.  
-
 **The user can play any of the games available.**  
 + Black Jack: The user plays against a computer. They are given two card values initially and then are asked if they would like to keep on drawing.    
 + Boggle: The program will randomly create a formation of sixteen letters and check the validity of the user's entered words by first solving for all possible words checking against a built-in dictionary. (This may be limited to a certain length and a certain number of common English words.)
@@ -23,6 +20,3 @@ There are four things this package gives.
 
 **The user can see what happens in the game over time on average with their initial placement.**
 + Black Jack: The user gets to see a graph of the probability of winning by the number of draws, given their initial placement. 
-+ Boggle: The user is told how many words are possible, possibly broken down by length.
-+	Chinese Poker: User can see the probability of a particular player winning with his/her hand.  
-+	Tic Tac Toe: The user can see the probability of winning/losing/tie-ing based on their first move, assuming all future moves are random (for the sake of simplicity & to focus on only that first move) against an AI that uses Minimax. This will be calculated by running n simulated games for each first move, in which the "user" moves are random (with the exception of the first), and the AI defends using Minimax. All outcomes will be recorded, and the percentages of wins/ties/losses will be calculated. This will be displayed as a board with the percentages for each initial move displayed in the corresponding board square.
