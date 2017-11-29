@@ -17,6 +17,3 @@ The object of Tic Tac Toe is to get three X's or O's in a row. You play on a thr
 + Boggle: The program will randomly create a formation of sixteen letters and check the validity of the user's entered words by first solving for all possible words checking against a built-in dictionary. (This may be limited to a certain length and a certain number of common English words.)
 +	Chinese Poker: User plays against a computer. 
 +	Tic Tac Toe: User plays against a computer. The user starts first, and the computer uses a Minimax algorithm to defend itself. The board will be represented either as (a) a 3x3 matrix that simply prints to the console, and requires users to enter the "coordinates" of where they want to place their X/O, or (b) a graphical representation using the plot command, which allows the user to click where they want to place their X/O using R's locator() function.
-
-**The user can see what happens in the game over time on average with their initial placement.**
-+ Black Jack: The user gets to see a graph of the probability of winning by the number of draws, given their initial placement. 
