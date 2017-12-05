@@ -1,0 +1,71 @@
+---
+title: "Introduction to Strategy Games"
+author: "Brian Gilbert, Linde Chen, Olivia Iles, Anna Xu"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to strategygames}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+The strategygames packages introduces 4 simple strategy games to users of R:
+
+* Chinese Poker
+* Boggle
+* Tic Tac Toe
+* Black Jack 
+
+This document introduces you to strategygame's basic functions and how to use them in the games.
+
+## **Chinese Poker**
+
+chinese.poker() allows you to begin playing a game of Chinese Poker with two computer opponents. Once this function is run and the game begins, the user will be dealt a hand of 18 cards as such. 
+
+These 18 cards will be automatically sorted for the user for ease of viewing. At each turn, the user will be prompted as to whether or not he/she would like to check his/her current hand. 
+
+## **Boggle**
+
+- Never uses retina figures
+- Has a smaller default figure size
+- Uses a custom CSS stylesheet instead of the default Twitter Bootstrap style
+
+## Vignette Info
+
+Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
+
+## Styles
+
+The `html_vignette` template includes a basic CSS theme. To override this theme you can specify your own CSS in the document metadata as follows:
+
+    output: 
+      rmarkdown::html_vignette:
+        css: mystyles.css
+
+## Figures
+
+The figure sizes have been customised so that you can easily put two images side-by-side. 
+
+```{r, fig.show='hold'}
+plot(1:10)
+plot(10:1)
+```
+
+You can enable figure captions by `fig_caption: yes` in YAML:
+
+    output:
+      rmarkdown::html_vignette:
+        fig_caption: yes
+
+Then you can use the chunk option `fig.cap = "Your figure caption."` in **knitr**.
+
+## More Examples
+
+You can write math expressions, e.g. $Y = X\beta + \epsilon$, footnotes^[A footnote here.], and tables, e.g. using `knitr::kable()`.
+
+```{r, echo=FALSE, results='asis'}
+knitr::kable(head(mtcars, 10))
+```
+
+Also a quote using `>`:
+
+> "He who gives up [code] safety for [code] speed deserves neither."
+([via](https://twitter.com/hadleywickham/status/504368538874703872))
