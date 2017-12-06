@@ -28,6 +28,10 @@ These 18 cards will be automatically sorted for the user for ease of viewing. At
 - Has a smaller default figure size
 - Uses a custom CSS stylesheet instead of the default Twitter Bootstrap style
 
+## **Tic Tac Toe**
+
+Calling the function ticTacToe() lets users play a game of Tic Tac Toe against the computer. The gameboard is displayed in the R plot window, and users click on board squares to make their move. The game ends when one player gets three of their pieces in a row, or no more moves can be made (a draw). The clearBoard() function can be called after a game to reset the board.
+
 ## Vignette Info
 
 Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
