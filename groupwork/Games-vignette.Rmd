@@ -32,6 +32,10 @@ These 18 cards will be automatically sorted for the user for ease of viewing. At
 
 Calling the function ticTacToe() lets users play a game of Tic Tac Toe against the computer. The gameboard is displayed in the R plot window, and users click on board squares to make their move. The game ends when one player gets three of their pieces in a row, or no more moves can be made (a draw). The clearBoard() function can be called after a game to reset the board.
 
+## **Black Jack**
+
+blackjack() allows you to play Black Jack in the R command window. The user first indicates whether they want a hand or if they want to input their own hand. Since Black Jack only depends on the value of each card, the user will receive the values of their card (2-10, where 10 can be either from the card 10, King, or Queen). If the user receives an Ace, this will be indicated by the card 13, and they will be asked to then set a binding value for Ace. They are then asked if they'd like to continue drawing. When they stop drawing, it will then be player 2's (i.e., the computer/dealer) turn. Once the game ends, they are shown the sum of both players. They can then replay. Once they decide to no longer replay, the user will be shown their score and the computer's score. 
+
 ## Vignette Info
 
 Note the various macros within the `vignette` section of the metadata block above. These are required in order to instruct R how to build the vignette. Note that you should change the `title` field and the `\VignetteIndexEntry` to match the title of your vignette.
