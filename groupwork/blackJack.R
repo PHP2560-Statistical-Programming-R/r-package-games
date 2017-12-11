@@ -17,7 +17,7 @@ blackjack <- function(){
     ################# INITIALIZING PLAYER 1 #################      
     
     # Start with how many cards total there will be in the deck. 
-    cards <- rep(c(1:9, 13, 10, 10, 10), times = 4)
+    cards <- rep(c(1:9, 13, 10, 10, 10, 10), times = 4)
     
     # Initializes game
     isRand <- readline(prompt = "Input 0 if you already have a hand or 1 if you'd like a random hand. ")
