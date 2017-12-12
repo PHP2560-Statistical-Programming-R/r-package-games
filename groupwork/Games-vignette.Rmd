@@ -24,9 +24,8 @@ These 18 cards will be automatically sorted for the user for ease of viewing. At
 
 ## **Boggle**
 
-- Never uses retina figures
-- Has a smaller default figure size
-- Uses a custom CSS stylesheet instead of the default Twitter Bootstrap style
+Calling boggle_play allows the user to play an adapted version of Boggle. The user must enter words that are able to be made by combining adjacent letters on the board. The program keeps track of the words entered, and it can display all possible words if requested. The program gives instructions for its use.
+The game differs from standard boggle in the following ways. First, the same letter square may be used twice in the same word, as long as it is not used consecutively. Also, the Boggle program uses a considerably reduced dictionary. The list of word comes from the list of 10000 most common English words as compiled in the following GitHub repo: https://github.com/first20hours/google-10000-english. This list was further cut down by considering only words of 3-6 letters. This list was compiled from Google data, so it contains some words that are not Standard English (such as "lol"), and it does not contain many words that are familiar to the average user yet fall outside the top 10000 common words.
 
 ## **Tic Tac Toe**
 
