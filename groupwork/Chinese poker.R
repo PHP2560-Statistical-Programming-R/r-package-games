@@ -1,4 +1,11 @@
 
+# check if dplyr is installed; if not, install it
+if (is.element("dplyr", installed.packages()[,1]) == TRUE) {
+  library(dplyr)
+} else {
+  install.packages("dplyr", dependencies = TRUE, repos = "http://cran.r-project.org")
+}
+
 # Function to call start.game()
 chinese.poker = function(){
   print(start.game())
@@ -154,12 +161,12 @@ user.playcard = function() {
     turn <<- rep(as.integer(deck[which(deck[,1] == turn[1])[1],]$value), length(turn))
     user.delete()
     user.win()
-    } else {
-      turn <<- as.integer(unlist(strsplit(turn, ",")))
-      user.delete()
-      user.win()
-      opponent1.check()
-    }
+  } else {
+    turn <<- as.integer(unlist(strsplit(turn, ",")))
+    user.delete()
+    user.win()
+    opponent1.check()
+  }
 }
 
 # *** OPPONENT 1's turn ***
@@ -170,17 +177,17 @@ opponent1.check = function() {
   if ((is.null(lapply(opponent1, nrow)[hand][[1]])) | is.null(opponent1[hand])) {
     print("Opponent 1 passes")
     opponent2.check()
+  } else {
+    opp1.filter =
+      data.frame(lapply(opponent1[[hand]][,2], as.numeric)) %>%
+      filter(value > turn[1])
+    if (nrow(opp1.filter) == 0) {
+      print("Opponent 1 passes")
+      opponent2.check()
     } else {
-        opp1.filter =
-          data.frame(lapply(opponent1[[hand]][,2], as.numeric)) %>%
-          filter(value > turn[1])
-        if (nrow(opp1.filter) == 0) {
-          print("Opponent 1 passes")
-          opponent2.check()
-        } else {
-            opponent1.play()
-          }
-      }
+      opponent1.play()
+    }
+  }
 }
 
 # Opponent 1 chooses and plays a card
@@ -188,17 +195,17 @@ opponent1.play = function() {
   hand = length(turn)
   opp1.filter =
     data.frame(lapply(opponent1[[hand]][,2], as.numeric)) %>%
-      filter(value > turn[1])
+    filter(value > turn[1])
   if (nrow(opp1.filter) == 0) {
     print("Opponent 1 passes")
     opponent2.check()
-    } else {
-      opp1move = sample(rep(opp1.filter[[1]], 3), 1)
-      opp1move <<- rep(as.integer(opp1move), hand)
-      opp1.delete()
-      opp1.win()
-      opponent2.check()
-    }
+  } else {
+    opp1move = sample(rep(opp1.filter[[1]], 3), 1)
+    opp1move <<- rep(as.integer(opp1move), hand)
+    opp1.delete()
+    opp1.win()
+    opponent2.check()
+  }
 }
 
 # *** OPPONENT 2's turn ***
@@ -209,18 +216,18 @@ opponent2.check = function() {
   if ((is.null(lapply(opponent2, nrow)[hand][[1]])) | is.null(opponent1[hand])) {
     print("Opponent 2 passes")
     user.check()
+  } else {
+    opp2.filter =
+      data.frame(lapply(opponent2[[hand]][,2], as.numeric)) %>%
+      filter(value > opp1move[1])
+    if (nrow(opp2.filter) == 0) {
+      print("Opponent 2 passes")
+      user.check()
     } else {
-        opp2.filter =
-          data.frame(lapply(opponent2[[hand]][,2], as.numeric)) %>%
-            filter(value > opp1move[1])
-        if (nrow(opp2.filter) == 0) {
-          print("Opponent 2 passes")
-          user.check()
-          } else {
-            print("new round")
-            opponent2.play()
-          }
-        }
+      print("new round")
+      opponent2.play()
+    }
+  }
 }
 
 # Opponent 2 chooses and plays a card
@@ -228,15 +235,15 @@ opponent2.play = function() {
   hand = length(turn)
   opp2.filter =
     data.frame(lapply(opponent2[[hand]][,2], as.numeric)) %>%
-      filter(value > opp1move[1])
+    filter(value > opp1move[1])
   if (nrow(opp2.filter) == 0) {
     print("Opponent 2 passes")
     user.check()
-    } else {
-      opp2move = sample(rep(opp2.filter[[1]], 3), 1)
-      opp2move <<- rep(as.integer(opp2move), hand)
-      opp2.delete()
-      opp2.win()
-      user.check()
-      }
+  } else {
+    opp2move = sample(rep(opp2.filter[[1]], 3), 1)
+    opp2move <<- rep(as.integer(opp2move), hand)
+    opp2.delete()
+    opp2.win()
+    user.check()
+  }
 }
