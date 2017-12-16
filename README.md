@@ -1,4 +1,4 @@
-**FINAL SUBMISSION as .zip file (including vignette) in strategygames folder**
+## **FINAL SUBMISSION as .zip file (including vignette) in strategygames folder**
 
 Our package will consist of 4 games: Black Jack, Boggle, Chinese Poker and Tic Tac Toe. The use will be able to play these games with the computer. 
 
