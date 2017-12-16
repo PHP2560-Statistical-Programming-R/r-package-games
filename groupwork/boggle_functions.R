@@ -38,7 +38,7 @@ boggle_getAdjacent = function(c1, c2){
 }
 
 #check whether word is valid on board
-boggle_checkWord = function(word, board=boggle_makeBoard()){
+boggle_checkWord = function(word, board){
   if(!is.character(word) | !length(word)==1){
     message("Please enter a string")
     return(FALSE)
@@ -110,10 +110,10 @@ boggle_play=function(board=boggle_makeBoard()){
   }
 }
 
-boggle_find_words = function(board=boggle_makeBoard){
+boggle_find_words = function(board){
   valid.words = NULL
   for(i in 1:length(dict)){
-    if(suppressMessages(boggle_checkWord(dict[i]))){
+    if(suppressMessages(boggle_checkWord(dict[i], board))){
       valid.words = c(valid.words, dict[i])
     }
   }
