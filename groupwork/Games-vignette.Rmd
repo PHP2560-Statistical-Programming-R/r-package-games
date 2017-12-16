@@ -36,10 +36,10 @@ Calling the function ticTacToe() lets users play a game of Tic Tac Toe against t
 
 ## **Black Jack**
 
-blackjack() allows you to play Black Jack in the R command window. 
+blackjack() allows you to play Black Jack in the R command window using the most barebone representations of playing cards (e.g., using only value of cards rather than the cards themselves). 
 
-The user first indicates whether they want a hand or if they want to input their own hand. Since Black Jack only depends on the value of each card, the user will receive the values of their card (2-10, where 10 can be either from the card 10, King, or Queen). 
+The user first indicates whether they want a hand or if they want to input their own hand. Since Black Jack only depends on the value of each card, the user will just receive the values of their card (2-10, where 10 can be either from the card 10, King, or Queen). **note: since all Face Cards are considered value 10, if the user has a Face Card, this will be represented as 10 in the hand**
 
-If the user receives an Ace, this will be indicated by the card 13, and they will be asked to then set a binding value for Ace. They are then asked if they'd like to continue drawing. 
+If the user receives an Ace, this will be indicated by the card 13, and they will be asked to then set a binding value for Ace. They are then asked if they'd like to continue drawing. Users will be shown their hand (which notes whether they have an Ace or not) as well as the values of their hand. 
 
 When they stop drawing, it will then be player 2's (i.e., the computer/dealer) turn. Once the game ends, they are shown the sum of both players. They can then replay. Once they decide to no longer replay, the user will be shown their score and the computer's score. 
