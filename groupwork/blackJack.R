@@ -63,7 +63,7 @@ blackjack <- function(){
       curAceVal <- c()
       ace.val <- 1
       while (numAce >= 1){
-        ace.val <- readline(prompt = "You have an Ace! Please enter a value for it (NOTE THAT THIS IS BINDING): ")
+        ace.val <- readline(prompt = "You have an Ace! Please enter either 1 or 11 as a value for it (NOTE THAT THIS IS BINDING): ")
         while(ace.val != 1 & ace.val != 11){
           ace.val <- readline(prompt = "ERROR! Please enter a valid input: ")
         }
